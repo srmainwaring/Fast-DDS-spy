@@ -17,7 +17,7 @@
  *
  */
 
-#include <cpp_utils/event/FileWatcherHandler.hpp>
+// #include <cpp_utils/event/FileWatcherHandler.hpp>
 #include <cpp_utils/event/MultipleEventHandler.hpp>
 #include <cpp_utils/event/PeriodicEventHandler.hpp>
 #include <cpp_utils/event/SignalEventHandler.hpp>
@@ -175,8 +175,8 @@ int main(
                 };
 
         // Creating FileWatcher event handler
-        std::unique_ptr<eprosima::utils::event::FileWatcherHandler> file_watcher_handler =
-                std::make_unique<eprosima::utils::event::FileWatcherHandler>(filewatcher_callback, file_path);
+        // std::unique_ptr<eprosima::utils::event::FileWatcherHandler> file_watcher_handler =
+        //         std::make_unique<eprosima::utils::event::FileWatcherHandler>(filewatcher_callback, file_path);
 
         /////
         // Periodic Handler for reload configuration in periodic time
@@ -233,10 +233,10 @@ int main(
             periodic_handler.reset();
         }
 
-        if (file_watcher_handler)
-        {
-            file_watcher_handler.reset();
-        }
+        // if (file_watcher_handler)
+        // {
+        //     file_watcher_handler.reset();
+        // }
     }
     catch (const eprosima::utils::ConfigurationException& e)
     {
